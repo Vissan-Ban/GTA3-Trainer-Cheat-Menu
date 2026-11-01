@@ -12,14 +12,14 @@ Restore and preserve the original October 2022 GTA III Trainer / Cheat Menu as a
 |---|---|---|
 | Public project record | Documented | Original GTAinside listing and release credits recorded |
 | Archive inventory | Complete | 25 entries inventoried; archive SHA-256 recorded |
-| Extracted-file checksums | Recorded | Manifest exists; original payload is not yet committed |
+| Extracted-file checksums | Recorded | Manifest exists; original ZIP is committed and byte identity is verified |
 | Repository documentation | In progress | README, restoration, archive audit, binary inspection, contribution and release guidance |
-| Original binary payload | Pending | Must be added without modification |
+| Original binary payload | Complete | Original ZIP is committed in original-archive; Git object identity matches the supplied file |
 | Script disassembly | Pending | User plans to provide the eleven disassembled text outputs |
 | Rebuild verification | Pending | No rebuilt scripts have been verified |
 | Installation verification | Pending | Exact TXD load path remains unresolved |
 | Clean in-game test | Pending | No repository-based clean-install test recorded |
-| Automated checks | Planned | Begin with repository/document/checksum validation; do not claim build validation before a reproducible build exists |
+| Automated checks | In place | Repository/document/checksum workflow exists; this is not a game build or runtime test |
 | Functional upgrades | Deferred | Not part of the current phase |
 
 ## Source-of-truth policy
@@ -35,8 +35,8 @@ Restore and preserve the original October 2022 GTA III Trainer / Cheat Menu as a
 - [x] Project overview and historical provenance recorded.
 - [x] Archive contents and integrity audited.
 - [x] Preservation rules documented.
-- [ ] Repository checks and release checklist in place.
-- [ ] Original release payload committed or attached with verified checksums.
+- [x] Repository checks and release checklist in place.
+- [x] Original release ZIP committed unchanged; Git object identity verified.
 
 ### Gate 2 — Recoverable source baseline
 - [ ] All eleven scripts disassembled.
@@ -53,6 +53,6 @@ Restore and preserve the original October 2022 GTA III Trainer / Cheat Menu as a
 ### Gate 4 — Release
 - [ ] All release checklist items completed.
 - [ ] Rights and redistribution status reviewed.
-- [ ] Version tag and release package created and independently checked.
+- [ ] Historical 2022 Release tag and package published and independently checked.
 
 Feature upgrades begin only after the preservation baseline and release process are dependable.
