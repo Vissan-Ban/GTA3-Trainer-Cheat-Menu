@@ -3,6 +3,8 @@ SHA-256 checksums for the supplied original archive: GTA3内置修改器.zip
 Archive SHA-256:
 662270e75920a6b99092545028359f94ef9dc1da484f42921bdadc76d40d90b2  GTA3内置修改器.zip
 
+Archive inventory: 25 files; 4,546,878 bytes uncompressed.
+
 Extracted files (paths are relative to the archive root):
 
 d9c3a4ddebc33c55e7169eeb2336fc258e2962cff9faafcc3b07d6d9d496e0ee  #U770b#U6211  GTA3#U5185#U7f6e#U4fee#U6539#U5668.txt
@@ -24,11 +26,13 @@ fae051f38bb24db48a1cbd4a78d1ba4a8cca6420ba949b91c770e647c05a2227  CLEO/CLEO_TEXT
 3905afc0216d06ee62956cf1763bfaeba35b7041d0e7b405b90eca725b31c0c8  CLEO/CLEO_TEXT/CHEAT_skin.fxt
 fd2e46c58b5a05d4bbeb6d291f8720affa61301235a0a7cf545e263a9aa2c831  CLEO/CLEO_TEXT/CHEAT_teleport.fxt
 2eea3e60fe94536318217363e7405d5d9be2a285e44ac8040888e94746a26ebf  CLEO/CLEO_TEXT/CHEAT_time.fxt
-c1029ecc7c749f367d0beb5588d056ef1f2e1f1e1da697efd03793064aa5b88  CLEO/CLEO_TEXT/CHEAT_vehicle.fxt
+c1029ecc7c749f367d0beb5588d056ef1f2a16f1e1da697efd03793064aa5b88  CLEO/CLEO_TEXT/CHEAT_vehicle.fxt
 324474c1ccc870f7251f2e90c013d3b7cf5efa115e419755d85c4d390408ff83  CLEO/CLEO_TEXT/CHEAT_weapon.fxt
 00aff7a2c3bdf2ab8b1d2b4c033e5b70c70d50bf413b2b1126affbb32dd5507d  CLEO/CLEO_TEXT/CHEAT_weather.fxt
 9bcfdd3e1aa2f44eedbe1a08dab6f19a56108c80c6bf6934f1b73cbf499068a5  Reademe_GTA3 CHEAT MENU.txt
 80463c4960cec672a5818cc4bd5caad7f8bc95fc76d8e6cd916ac90498ac583a  game.png
 4cb74dc860bb07147186d66b9720b60c1f290787172b1c8176828fd9d491dae6  models/TRAINER.txd
 
-These hashes identify the exact files received for restoration. They do not prove that the archive is the only historical release.
+These hashes were recomputed from the archive mounted in the current conversation workspace. They identify the exact received files and can be used to verify later copies. They do not prove that this is the only historical release.
+
+The archive contains 11 compiled CLEO scripts, 10 FXT text files, one TXD, two documentation text files, and one screenshot. The compiled .cs files are preserved as binary originals; they are not C# source code.
