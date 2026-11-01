@@ -1,0 +1,5 @@
+# Compiled CLEO scripts are binary SCM data, not C# source.
+*.cs binary linguist-detectable=false
+
+# Keep Windows command scripts readable in Git.
+*.cmd text eol=crlf
