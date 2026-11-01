@@ -3,8 +3,8 @@ setlocal EnableExtensions
 
 rem Disassemble the supplied GTA III CLEO binaries with Sanny Builder.
 rem Usage:
-rem   decompile-all.cmd "C:\\Path\\To\\SannyBuilder\\sanny.exe"
-rem Run from the repository root. Raw output is written to source\\disassembled.
+rem   decompile-all.cmd "C:\Path\To\SannyBuilder\sanny.exe"
+rem Run from the repository root. Raw output is written to source\disassembled.
 rem This does not modify the original CLEO binaries.
 
 if "%~1"=="" (
@@ -18,7 +18,7 @@ if not exist "%SANNY%" (
     exit /b 2
 )
 
-set "OUT=source\\disassembled"
+set "OUT=source\disassembled"
 if not exist "%OUT%" mkdir "%OUT%"
 
 set "FAILED=0"
@@ -37,7 +37,7 @@ for %%F in (
 ) do (
     echo.
     echo [DISASSEMBLE] CLEO\%%~F.cs
-    "%SANNY%" --decompile "CLEO\%%~F.cs" "%OUT%\%%~F.txt" --game gta3
+    "%SANNY%" --game gta3 --decompile "CLEO\%%~F.cs" "%OUT%\%%~F.txt"
     if errorlevel 1 (
         echo [FAILED] %%~F
         set "FAILED=1"
