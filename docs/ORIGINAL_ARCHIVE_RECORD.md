@@ -6,7 +6,7 @@
 - Archive SHA-256: `662270e75920a6b99092545028359f94ef9dc1da484f42921bdadc76d40d90b2`
 - ZIP entries: 25
 - Total uncompressed size: 4,546,878 bytes
-- Verification: archive was read in the restoration workspace; every file was extracted in memory and its SHA-256 and byte length recalculated.
+- Verification: the original archive was hashed in the restoration workspace; the GitHub-stored object was independently checked by comparing its Git blob SHA-1 with the Git blob SHA-1 calculated from the local original bytes. The values match exactly.
 - Verification date: 2026-11-01
 
 This record identifies the exact archive supplied for this restoration. It does not prove that it is the only historical build ever distributed.
@@ -28,10 +28,10 @@ The supplied ZIP is the immutable reference archive. Its internal paths, filenam
 
 Do not overwrite original files with disassembled text, rebuilt scripts, corrected readmes, or experimental assets. Put recovered text under `source/disassembled/` and modified work under `source/modified/`.
 
-## Repository upload status
+## Repository archival status
 
-**Checksum verification is complete; binary archival in GitHub is still pending.**
+<badge>Archived and verified</badge>
 
-The archive and extracted binary payload have not yet been committed to the Git repository or attached as a GitHub Release asset. The current GitHub connector path available during this step supports text file writes but does not expose a binary upload/release-asset operation. Therefore this record and checksum manifest are documentation of the verified source archive, not a claim that the binary archive is already downloadable from this repository.
+The original ZIP is committed at [`original-archive/GTA3内置修改器.zip`](../original-archive/GTA3%E5%86%85%E7%BD%AE%E4%BF%AE%E6%94%B9%E5%99%A8.zip). Its stored Git blob SHA-1 is `9bfc41402efce48824916209730682aa3feb8cff`, which exactly matches the Git blob SHA-1 computed from the original local file (2,232,415 bytes). The independently recorded SHA-256 of the original file is listed above.
 
-The next archival action must transfer the original ZIP unchanged (or add its extracted contents unchanged) through a binary-capable GitHub upload route, then verify the stored file hash against the value above.
+This confirms that GitHub stores the same bytes as the supplied archive. The GitHub Release publication is a separate step and has not yet been completed.
