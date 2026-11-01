@@ -2,11 +2,9 @@
 
 A CLEO-based trainer and visual cheat menu for the original PC version of **Grand Theft Auto III**.
 
-Created by **Vissan Ban** in October 2022. This repository is being restored from the original release package. Original compiled scripts and assets are treated as the preservation baseline; recovered/disassembled source will be stored separately and will not silently replace the originals.
+Created by **Vissan Ban** in October 2022. This repository is being restored from the original release package. Original compiled scripts and assets are the preservation baseline; recovered/disassembled text is stored separately and must never silently replace the originals.
 
-## Features
-
-The menu contains ten feature categories:
+## Features recorded in the original release
 
 | Menu | Script |
 |---|---|
@@ -21,45 +19,61 @@ The menu contains ten feature categories:
 | Time adjustment | `CHEAT_time.cs` |
 | Mission loading | `CHEAT_mission.cs` |
 
-The main menu controller is `CHEAT menu.cs`. The release also includes matching FXT text files and the `TRAINER.txd` menu texture.
+The main menu controller is `CHEAT menu.cs`. The original package also contains ten FXT text files and the `TRAINER.txd` menu texture.
 
-## Controls
-
-According to the original release notes:
+## Controls recorded in the original release notes
 
 - Press **`~` + a number-row key** to open/use the menu (not the numeric keypad).
 - **Left / Right Arrow**: move through options.
 - **Enter**: confirm.
 - **Backspace**: exit.
 
+These are historical release-note details; they are not a claim of a fresh in-game verification.
+
 ## Installation
 
-1. Install a CLEO library compatible with your GTA III installation.
-2. Copy the original release's CLEO scripts and `CLEO_TEXT` folder into the game's CLEO directory, preserving the folder structure.
-3. Place `TRAINER.txd` in the location expected by the scripts. This path will be confirmed during restoration and in-game testing.
+**Installation instructions are currently under verification.** The archive stores scripts under `CLEO/`, FXT files under `CLEO/CLEO_TEXT/`, and the texture dictionary under `models/TRAINER.txd`. Preserve that layout while working with the original package. The exact runtime TXD loading path must be confirmed from the main menu script or a clean in-game test before publishing a definitive installation guide.
 
-Do not mix files from different revisions. Compatibility and installation details will be tightened after the original package is committed and tested.
+See [Installation status](docs/INSTALLATION_STATUS.md).
 
 ## Project status
 
+This project is currently focused on repository foundations and preservation, not feature upgrades.
+
 - [x] Original 2022 release archive received and inventoried.
-- [x] Original instructions and attributions recorded.
-- [x] Restoration notes and a local batch disassembly helper added.
-- [ ] Original binary package committed to the repository.
-- [ ] All 11 compiled CLEO scripts disassembled using the GTA III edit mode.
-- [ ] Recovered source reviewed and normalized without changing behavior.
-- [ ] Recovered source recompiled and compared against the original binaries.
-- [ ] In-game regression test on a clean GTA III installation.
-- [ ] Automated build workflow.
+- [x] Original archive and extracted-file SHA-256 manifest recorded.
+- [x] Historical release information and credits documented.
+- [x] Preservation, contribution, and release procedures documented.
+- [x] Basic GitHub Actions repository checks added.
+- [ ] Original binary package committed to the repository or attached as a verified release asset.
+- [ ] All 11 compiled CLEO scripts disassembled using GTA III edit mode.
+- [ ] Disassembly reviewed and stored separately from originals.
+- [ ] Rebuild/reproducibility and installation paths verified.
+- [ ] Clean-install in-game regression test completed.
 
-**Important:** the original `.cs` files are compiled CLEO/SCM binary scripts, not C# source. Sanny Builder can disassemble them into editable text, but comments and original variable names are generally not recoverable. Any recovered text will be labelled as disassembled source, not the lost original source.
+The detailed phase checklist is in [Project status](docs/PROJECT_STATUS.md).
 
-## Credits
+**Important:** the original `.cs` files are compiled CLEO/SCM binary scripts, not C# source. Sanny Builder can disassemble them into editable text, but comments and original variable names are generally not recoverable. Disassembled output is not the lost original authoring source.
 
-The original October 2022 readme credits **Bilinmeyen Bey** as the basis for the trainer, and **Lost_Foever (dim / d88)** for the mission-loading feature. The notes also state that the author fixed the mission-loading flow and added/compiled the time-adjustment and skin-change options. These attributions are preserved from the supplied release notes.
+## Documentation
 
-## Development
+- [Restoration method and verification plan](docs/RESTORATION.md)
+- [Project status and phase gates](docs/PROJECT_STATUS.md)
+- [Original archive audit](docs/ARCHIVE_AUDIT.md)
+- [Original SHA-256 manifest](docs/ORIGINAL_SHA256SUMS.txt)
+- [Historical public release record](docs/UPSTREAM_RELEASE.md)
+- [Preliminary binary inspection](docs/BINARY_INSPECTION.md)
+- [Installation evidence and unresolved paths](docs/INSTALLATION_STATUS.md)
+- [Release readiness checklist](docs/RELEASE_PROCESS.md)
+- [Contribution and preservation rules](CONTRIBUTING.md)
+- [Changelog](CHANGELOG.md)
 
-The target is **GTA III**, not Vice City or San Andreas. Use the GTA III edit mode in Sanny Builder when disassembling or compiling. See [Restoration notes](docs/RESTORATION.md).
+## Credits and rights
 
-No license has been added yet. Please do not assume that the project is public domain or that third-party portions may be relicensed.
+The original October 2022 readme credits **Bilinmeyen Bey** as the basis for the trainer, and **Lost_Foever (dim / d88)** for the mission-loading feature. The release notes also describe changes by Vissan Ban to the mission-loading flow and the addition of time-adjustment and skin-change options. These attributions are preserved from the supplied release notes.
+
+No license has been added because the supplied package did not establish redistribution rights for every included component. Do not assume that the project is public domain or that third-party portions may be relicensed.
+
+## Development scope
+
+The target is **Grand Theft Auto III for PC**, not Vice City or San Andreas. Use Sanny Builder's GTA III edit mode for script recovery. See [Contributing](CONTRIBUTING.md) before proposing changes.
