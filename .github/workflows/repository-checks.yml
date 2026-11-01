@@ -1,0 +1,55 @@
+name: Repository checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  structure-and-documentation:
+    name: Validate repository foundation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify required project files
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(
+            README.md
+            CHANGELOG.md
+            CONTRIBUTING.md
+            docs/RESTORATION.md
+            docs/PROJECT_STATUS.md
+            docs/RELEASE_PROCESS.md
+            docs/INSTALLATION_STATUS.md
+            docs/ARCHIVE_AUDIT.md
+            docs/ORIGINAL_SHA256SUMS.txt
+          )
+          for file in "${required[@]}"; do
+            test -s "$file" || { echo "::error file=$file::Required file is missing or empty"; exit 1; }
+          done
+          echo "All required repository foundation files are present."
+
+      - name: Verify original archive checksum manifest format
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! grep -Eq '^[0-9a-f]{64}[[:space:]]' docs/ORIGINAL_SHA256SUMS.txt; then
+            echo "::error::No SHA-256 entries found in docs/ORIGINAL_SHA256SUMS.txt"
+            exit 1
+          fi
+          echo "SHA-256 manifest contains checksum entries."
+
+      - name: Ensure no accidental game binaries are treated as source code
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -Fq '*.cs binary linguist-detectable=false' .gitattributes
+          echo "Compiled CLEO .cs files are marked as binary."
