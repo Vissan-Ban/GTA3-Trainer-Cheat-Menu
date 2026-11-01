@@ -25,6 +25,8 @@ jobs:
             README.md
             CHANGELOG.md
             CONTRIBUTING.md
+            SUPPORT.md
+            SECURITY.md
             docs/RESTORATION.md
             docs/PROJECT_STATUS.md
             docs/RELEASE_PROCESS.md
