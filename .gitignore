@@ -1,0 +1,10 @@
+# Sanny Builder logs and temporary output
+compile.log
+*.log
+
+# Recovered disassembly is generated output; commit only after review.
+source/disassembled/
+
+# Temporary build output
+build/
+dist/
