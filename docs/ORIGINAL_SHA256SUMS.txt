@@ -7,7 +7,7 @@ Archive inventory: 25 files; 4,546,878 bytes uncompressed.
 
 Extracted files (paths are relative to the archive root):
 
-d9c3a4ddebc33c55e7169eeb2336fc258e2962cff9faafcc3b07d6d9d496e0ee  #U770b#U6211  GTA3#U5185#U7f6e#U4fee#U6539#U5668.txt
+d9c3a4ddebc33c55e7169eeb2336fc258e2962cff9faafcc3b07d6d9d496e0ee  看我  GTA3内置修改器.txt
 29ddf2ed0041c6170cf5b6880e5b38a30a6a352d98a8ce2e089c3963c194331b  CLEO/CHEAT menu.cs
 8370cbb77d26442fe92c9f175113c254ca698c48f2a4e030c251a6dd6d34a829  CLEO/CHEAT_ally.cs
 31db2eead09e3ae2c47b25673818cf3203f07d34e59c8593dd0c2ddd33304a30  CLEO/CHEAT_misc.cs
@@ -33,6 +33,6 @@ c1029ecc7c749f367d0beb5588d056ef1f2a16f1e1da697efd03793064aa5b88  CLEO/CLEO_TEXT
 80463c4960cec672a5818cc4bd5caad7f8bc95fc76d8e6cd916ac90498ac583a  game.png
 4cb74dc860bb07147186d66b9720b60c1f290787172b1c8176828fd9d491dae6  models/TRAINER.txd
 
-These hashes were recomputed from the archive mounted in the current conversation workspace. They identify the exact received files and can be used to verify later copies. They do not prove that this is the only historical release.
+These hashes were recomputed directly from the ZIP mounted in the current conversation workspace. They identify the exact received files and can be used to verify later copies. They do not prove that this is the only historical release.
 
 The archive contains 11 compiled CLEO scripts, 10 FXT text files, one TXD, two documentation text files, and one screenshot. The compiled .cs files are preserved as binary originals; they are not C# source code.
